@@ -69,3 +69,23 @@ bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 unbind -t vi-copy Enter
 bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 ```
+
+## tmux 2.4 版本之后
+
+### macos high sierra
+
+    bind-key -Tcopy-mode-vi 'v' send -X begin-selection
+    bind-key -Tcopy-mode-vi 'y' send -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+    bind-key -Tcopy-mode-vi Escape send -X cancel
+    bind-key -Tcopy-mode-vi V send -X rectangle-toggle
+
+### ubuntu using xsel
+
+    bind -T copy-mode-vi p send -X copy-pipe-and-cancel 'xsel -ip'
+    bind -T copy-mode-vi s send -X copy-pipe-and-cancel 'xsel -is'
+    bind -T copy-mode-vi o send -X copy-pipe-and-cancel 'xsel -ib'
+
+### ubuntu using xclip
+
+    bind -T copy-mode-vi y send -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+
