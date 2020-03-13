@@ -58,7 +58,7 @@ set -g message-bg colour221
 set -g message-attr bold
 set -g status-left '#[fg=colour235,bg=colour252,bold] #S #[fg=colour252,bg=colour238,nobold]#[fg=colour245,bg=colour238,bold] #(whoami) #[fg=colour238,bg=colour234,nobold]'
 set -g window-status-format "#[fg=colour244,bg=colour233,nobold,noitalics,nounderscore] #I #[fg=colour240,bg=colour233,nobold,noitalics,nounderscore]  #[default]#W "
-set -g window-status-current-format "#[fg=colour233,bg=colour31,nobold,noitalics,nounderscore] #[fg=colour117,bg=colour31,nobold,noitalics,nounderscore]#I  #[fg=colour231,bg=colour31,bold,noitalics,nounderscore]#W #[fg=colour31,bg=colour233,nobold,noitalics,nounderscore] "
+set -g window-status-current-format "#[fg=colour233,bg=colour63,nobold,noitalics,nounderscore] #[fg=colour117,bg=colour63,nobold,noitalics,nounderscore]#I  #[fg=colour231,bg=colour63,bold,noitalics,nounderscore]#W #[fg=colour63,bg=colour233,nobold,noitalics,nounderscore] "
 
 # brew install reattach-to-user-namespace
 # Setup 'v' to begin selection as in Vim
